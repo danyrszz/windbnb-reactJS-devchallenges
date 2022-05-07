@@ -1,0 +1,18 @@
+.search-btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.search-btn{
+  width: 120px;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  border-radius: 10px;
+  color: #F2F2F2;
+  background: #EB5757E5;
+}
+.search-btn:hover{
+  cursor: pointer;
+}

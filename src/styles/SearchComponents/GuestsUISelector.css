@@ -1,0 +1,27 @@
+.guests-ui-wrapper{
+  padding: 0 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.guests-sel-container{
+  min-width: 350px;
+  width: 80%;
+}
+.guest-selector span{
+  display: block;
+}
+.ages-tag{
+  font-size: .8em;
+  color: #c3c3c3;
+}
+.guests-sel-container button{
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.guests-sel-container button:hover{
+  cursor: pointer;
+}

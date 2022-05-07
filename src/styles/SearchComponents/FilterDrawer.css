@@ -1,0 +1,68 @@
+.filter-drawer-wrapper{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #333333;
+}
+.filter-drawer{
+  width: 100%;
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+/* title section  */
+.title{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.btn-close{
+  background: none;
+}
+.btn-close:hover{
+  cursor: pointer;
+}
+
+
+/* location and guests buttons */
+.selector-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+.selector-indicator{
+  font-size: 0.7em;
+  font-weight: bolder;
+}
+.separator{
+  width: 100%;
+  height: 1px;
+  background-color: #0000001A;
+}
+.filter-drawer--selector{
+  min-width: 350px;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px 0px #0000001A;
+}
+.filter-drawer--selector:hover{
+  cursor: pointer;
+}
+.filter-drawer--location{
+  padding: 1em;
+}
+.filter-drawer--guests{
+  padding: 1em;
+}
+
+
+/* container location or guests  */
+.location-or-guests-container{
+  margin-top: 1em;
+}
