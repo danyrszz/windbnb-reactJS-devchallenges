@@ -66,3 +66,18 @@
 .location-or-guests-container{
   margin-top: 1em;
 }
+
+@media screen and ( min-width:650px) {
+  .filter-drawer-wrapper{
+    top:0;
+  }
+}
+
+@media screen and ( min-width:1000px) {
+  .filter-drawer{
+    background-color: aqua;
+  }
+  .selector-wrapper{
+    background-color: blue;
+  }
+}

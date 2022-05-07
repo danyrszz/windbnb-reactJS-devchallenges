@@ -1,0 +1,32 @@
+.stay-container{
+  max-width: 400px;
+  margin: 10px 0 25px 0;
+}
+.stay-img{
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+.stay-star-icon{
+  font-size: 1.2em;
+  color: red;
+}
+.stay-details{
+  color: #828282;
+  font-size: 0.9em;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.stay-superhost{
+  font-size: 0.7em;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+.stay-title{
+  padding: 5px ;
+  font-weight: bold;
+}

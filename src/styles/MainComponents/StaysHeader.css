@@ -1,0 +1,9 @@
+.stays-header-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.stays-title{
+  font-size: 1.2em;
+  font-weight: bold;
+}

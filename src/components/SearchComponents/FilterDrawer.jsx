@@ -31,6 +31,7 @@ export function FilterDrawer ({
               <div>{!params.guests ? "Add Guests" : params.guests + " guests" }</div>
             </div>
           </div>
+          
         </div>
 
         <div className="location-or-guests-container">
