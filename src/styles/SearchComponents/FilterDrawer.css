@@ -1,8 +1,9 @@
 .filter-drawer-wrapper{
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   color: #333333;
+  background-color: rgba(0,0,0,0.5);
 }
 .filter-drawer{
   width: 100%;
@@ -70,14 +71,28 @@
 @media screen and ( min-width:650px) {
   .filter-drawer-wrapper{
     top:0;
+    left: 0;
   }
 }
 
 @media screen and ( min-width:1000px) {
-  .filter-drawer{
-    background-color: aqua;
+  .filter-drawer--selector{
+    display: flex;
   }
-  .selector-wrapper{
-    background-color: blue;
+  .filter-drawer--selector > *{
+    width: 100%;
+    flex-grow:1;
+  }
+  .filter-drawer--location{
+    border-right: 1px solid #0000001A;;
+  }
+  .separator{
+    display: none;
+  }
+  .guests-selector{
+    width: 55%;
+    float: right;
+    margin-bottom: 50px;
+    text-align: left;
   }
 }

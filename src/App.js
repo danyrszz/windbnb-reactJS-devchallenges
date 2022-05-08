@@ -4,7 +4,16 @@ import { Stay } from './components/MainComponents/Stay';
 import { StaysHeader } from './components/MainComponents/StaysHeader';
 import { SearchBar } from './components/SearchComponents/SearchBar';
 
+
+const data = require("./assets/data/stays.json");
+//here we're fetching the locations from the JSON
+let locations = [];
+data.forEach(element => {
+  if(!locations.includes(element.city)) locations = [ ...locations, element.city];  
+});
+
 function App() {
+
   return (
     <div className="App">
     
@@ -17,13 +26,13 @@ function App() {
      
       <StaysHeader />
 
-      <Stay superHost={true}></Stay>
-      <Stay superHost={true}></Stay>
-      <Stay superHost={true}></Stay>
-      <Stay superHost={true}></Stay>
+      <div className="stays-container">
+      </div>
+
 
     </div>
   );
 }
 
-export default App;
+export default App ;
+export {locations, data};

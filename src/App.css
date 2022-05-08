@@ -19,6 +19,27 @@
   width: 100%;
 }
 
+/* stays container grid */
+.stays-container{
+  width: fit-content;
+}
+.stays-container > *{
+  padding: 0 20px;
+}
+
+@media screen and (min-width:800px){
+  .stays-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width:1300px){
+  .stays-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
 @media screen and ( min-width:650px) {
   .App header{
     flex-direction: row;

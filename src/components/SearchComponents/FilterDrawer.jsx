@@ -4,7 +4,7 @@ import { GuestsUISelector } from './GuestsUISelector';
 import { SearchButton } from './SearchButton';
 
 export function FilterDrawer ({
-  toggleVisible, caller, toggleLocation, toggleGuests, params, setLocation, substractGuest, addGuest, guests
+  toggleVisible, caller, toggleLocation, toggleGuests, params, setLocation, substractGuest, addGuest, guests, search
 }) {
 
   return(
@@ -25,23 +25,21 @@ export function FilterDrawer ({
               <div>{!params.location ? "Add Location" : params.location }</div>
             </div>
             <div className="separator"></div>
-
             <div id="guests" className="filter-drawer--guests" onClick={toggleGuests}>
               <span className='selector-indicator'>GUESTS</span>
               <div>{!params.guests ? "Add Guests" : params.guests + " guests" }</div>
             </div>
           </div>
-          
         </div>
 
         <div className="location-or-guests-container">
           {caller==='location'?
-            <LocationUISelector setLocation={setLocation}/> :
-            <GuestsUISelector substractGuest={substractGuest} addGuest={addGuest} guests={guests}/>
+            <div className='location-selector'> <LocationUISelector setLocation={setLocation}/> </div>:
+            <div className='guests-selector'> <GuestsUISelector substractGuest={substractGuest} addGuest={addGuest} guests={guests}/> </div>
           }
         </div>
 
-        <SearchButton />
+        <SearchButton search ={search}  />
 
       </div>
     </div>

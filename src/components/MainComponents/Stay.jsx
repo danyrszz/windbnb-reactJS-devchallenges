@@ -9,7 +9,7 @@ export function Stay ({superHost}){
         <span className='stay-type'> Full House </span>
         
         <div>
-          <span class="material-symbols-outlined stay-star-icon">
+          <span className="material-symbols-outlined stay-star-icon">
             star
           </span> 
           <span> 4.50 </span>

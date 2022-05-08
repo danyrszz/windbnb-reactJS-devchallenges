@@ -22,7 +22,7 @@ export function SearchBar (){
   }
 
   const setLocation = (location) => {
-    setParams({...params, location:location})
+    setParams({...params, location:location});
   }
 
   
@@ -56,7 +56,11 @@ export function SearchBar (){
         break;
       }
     setParams({...params, guests: params.guests+1});
-    }
+  }
+
+  function search(){
+    setVisible(false);
+  }
     
 
   return(
@@ -72,6 +76,7 @@ export function SearchBar (){
       substractGuest = {substract}
       addGuest = {add}
       guests = {guests}
+      search = {search} 
     /> : null}
 
     <div className="search-bar">
@@ -83,7 +88,8 @@ export function SearchBar (){
         {!params.guests? "Add Guests":params.guests+" guests"}
       </div>
       <div className="division"></div>
-      <div className="search-bar--search-icon element">
+
+      <div className="search-bar--search-icon element" onClick={search}>
         <span className = "material-symbols-outlined">search</span>
       </div>
     </div>
