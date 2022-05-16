@@ -1,23 +1,23 @@
 import '../../styles/MainComponents/Stay.css';
-export function Stay ({superHost}){
+export function Stay ({superHost, photo, type, rating, title}){
   return(
     <div className="stay-container">
-      <img className="stay-img" src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80" alt="stay" />
+      <img className="stay-img" src={photo} alt="stay" />
      
       <div className='stay-details'>
         {superHost ? <span className='stay-superhost'> SUPER HOST </span> : null}
-        <span className='stay-type'> Full House </span>
+        <span className='stay-type'> {type} </span>
         
         <div>
           <span className="material-symbols-outlined stay-star-icon">
             star
           </span> 
-          <span> 4.50 </span>
+          <span> {rating} </span>
         </div>
       </div>
       
       <div className='stay-title'>
-        <span> Lovely Studio near Railway Station </span>
+        <span> {title} </span>
       </div>
     </div>
   )

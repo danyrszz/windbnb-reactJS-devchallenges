@@ -23,16 +23,28 @@ function App() {
         </div>
         <SearchBar></SearchBar>
       </header>
-     
-      <StaysHeader />
+
+      <StaysHeader totalResults = {data.length}/>
 
       <div className="stays-container">
+        {data.map( stay => {
+          return(
+            <Stay
+              key={stay.photo}
+              superHost={stay.superHost}
+              photo={stay.photo}
+              type={stay.type}
+              rating = {stay.rating}
+              title = {stay.title}
+            />
+          )
+        })}
       </div>
 
 
     </div>
   );
 }
-
+console.log(data)
 export default App ;
 export {locations, data};

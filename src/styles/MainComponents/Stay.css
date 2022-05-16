@@ -3,9 +3,11 @@
   max-width: 400;
 }
 .stay-img{
+  object-fit: cover;
   width: 100%;
   max-width: 400px;
   border-radius: 20px;
+  max-height: 250px;
 }
 .stay-star-icon{
   font-size: 1.2em;
