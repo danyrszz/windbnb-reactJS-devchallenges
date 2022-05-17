@@ -3,48 +3,64 @@ import './App.css';
 import { Stay } from './components/MainComponents/Stay';
 import { StaysHeader } from './components/MainComponents/StaysHeader';
 import { SearchBar } from './components/SearchComponents/SearchBar';
-
+import { useState } from 'react';
 
 const data = require("./assets/data/stays.json");
-//here we're fetching the locations from the JSON
+//here we're fetching just the locations from the JSON
 let locations = [];
+let totalResults = 0;
+
 data.forEach(element => {
   if(!locations.includes(element.city)) locations = [ ...locations, element.city];  
 });
 
 function App() {
+  const [stays, setStays] = useState(data)
+  
+  function updateParams (city, maxGuests){
+    city = city ? city.split(",")[0] : null;
 
-  return (
-    <div className="App">
+    if(!city){
+      //search only for guests
+      let filtered = data.filter( stay=> stay.maxGuests >= maxGuests);
+      setStays(filtered);
+    }else{
+      //search for both parameters
+      let filtered = data.filter( stay=> (stay.maxGuests >= maxGuests)&&(stay.city===city) );
+      setStays(filtered);
+    }
+  }
+  console.log(stays)
     
+  return (
+    <div className="App">    
       <header>
         <div className="header-logo">
           <img src={require("./assets/img/logo.png")} alt="logo" ></img>
         </div>
-        <SearchBar></SearchBar>
+        <SearchBar search = {updateParams}></SearchBar>
       </header>
 
-      <StaysHeader totalResults = {data.length}/>
+      <StaysHeader totalResults = {totalResults}/>
 
       <div className="stays-container">
-        {data.map( stay => {
-          return(
-            <Stay
-              key={stay.photo}
-              superHost={stay.superHost}
-              photo={stay.photo}
-              type={stay.type}
-              rating = {stay.rating}
-              title = {stay.title}
-            />
-          )
-        })}
+        {
+          stays.map( stay => {
+            return(
+              <Stay
+                key={stay.photo}
+                superHost={stay.superHost}
+                photo={stay.photo}
+                type={stay.type}
+                rating = {stay.rating}
+                title = {stay.title}
+              />
+            )
+          })
+        }
       </div>
-
-
     </div>
   );
 }
-console.log(data)
 export default App ;
 export {locations, data};

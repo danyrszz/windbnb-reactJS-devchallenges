@@ -1,7 +1,7 @@
 import '../../styles/SearchComponents/SearchBar.css';
 import { FilterDrawer } from '../SearchComponents/FilterDrawer';
 import { useState } from 'react';
-export function SearchBar (){
+export function SearchBar ({search}){
 
   const [visible, setVisible] = useState(false);
   const [caller, setCaller] = useState(null);
@@ -10,8 +10,12 @@ export function SearchBar (){
 
 
   const toggleVisible = (e)=>{
-    visible ? setVisible (false) : setVisible (true);
-    setCaller(e.target.id);
+    if(!visible){
+      setVisible(true);
+      setCaller(e.target.id);
+    }else{
+      setVisible(false);
+    }
   }
 
   const toggleLocation = (e) =>{
@@ -58,11 +62,6 @@ export function SearchBar (){
     setParams({...params, guests: params.guests+1});
   }
 
-  function search(){
-    setVisible(false);
-  }
-    
-
   return(
     <>
     {visible? 
@@ -89,7 +88,7 @@ export function SearchBar (){
       </div>
       <div className="division"></div>
 
-      <div className="search-bar--search-icon element" onClick={search}>
+      <div className="search-bar--search-icon element" onClick={()=>search(params.location, params.guests)}>
         <span className = "material-symbols-outlined">search</span>
       </div>
     </div>

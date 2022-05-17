@@ -39,7 +39,7 @@ export function FilterDrawer ({
           }
         </div>
 
-        <SearchButton search ={search}  />
+        <SearchButton search ={search} params={params} hideDrawer = {toggleVisible} />
 
       </div>
     </div>
