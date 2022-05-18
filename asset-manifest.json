@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/windbnb-reactJS-devchallenges/static/css/main.aaeaf7a2.css",
+    "main.js": "/windbnb-reactJS-devchallenges/static/js/main.5d4b3883.js",
+    "index.html": "/windbnb-reactJS-devchallenges/index.html",
+    "main.aaeaf7a2.css.map": "/windbnb-reactJS-devchallenges/static/css/main.aaeaf7a2.css.map",
+    "main.5d4b3883.js.map": "/windbnb-reactJS-devchallenges/static/js/main.5d4b3883.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aaeaf7a2.css",
+    "static/js/main.5d4b3883.js"
+  ]
+}
