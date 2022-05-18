@@ -8,29 +8,30 @@ import { useState } from 'react';
 const data = require("./assets/data/stays.json");
 //here we're fetching just the locations from the JSON
 let locations = [];
-let totalResults = 0;
-
 data.forEach(element => {
   if(!locations.includes(element.city)) locations = [ ...locations, element.city];  
 });
 
 function App() {
-  const [stays, setStays] = useState(data)
-  
-  function updateParams (city, maxGuests){
-    city = city ? city.split(",")[0] : null;
 
+  //app state
+  const [stays, setStays] = useState(data);
+  let totalResults = stays.length;
+  
+  function search (city, maxGuests){
+    city = city ? city.split(",")[0] : null;
     if(!city){
       //search only for guests
       let filtered = data.filter( stay=> stay.maxGuests >= maxGuests);
       setStays(filtered);
+      totalResults = stays.length;
     }else{
       //search for both parameters
       let filtered = data.filter( stay=> (stay.maxGuests >= maxGuests)&&(stay.city===city) );
       setStays(filtered);
+      totalResults = stays.length;
     }
   }
-  console.log(stays)
     
   return (
     <div className="App">    
@@ -38,7 +39,7 @@ function App() {
         <div className="header-logo">
           <img src={require("./assets/img/logo.png")} alt="logo" ></img>
         </div>
-        <SearchBar search = {updateParams}></SearchBar>
+        <SearchBar search = {search}></SearchBar>
       </header>
 
       <StaysHeader totalResults = {totalResults}/>
