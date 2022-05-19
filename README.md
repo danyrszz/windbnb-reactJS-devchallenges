@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Custom Button Component</h1>
+<h1 align="center">Windbnb</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,15 +8,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://danyrszz.github.io/Button-component-ReactJS/">
+    <a href="https://danyrszz.github.io/windbnb-reactJS-devchallenges/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/danyrszz/Button-component-ReactJS">
+    <a href="https://github.com/danyrszz/windbnb-reactJS-devchallenges">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY">
+    <a href="https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD">
       Challenge
     </a>
   </h3>
@@ -54,7 +54,7 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD) was to build an application to complete the given user stories.
 
 ## How To Use
 
@@ -75,6 +75,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@your-username](https://github.com/danyrszz)
+- Twitter [@your-twitter](https://twitter.com/danyrszz)
